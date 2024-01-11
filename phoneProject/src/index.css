@@ -1,0 +1,250 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+ 
+  background-color: #e4e2e2;
+  
+  color: rgba(255, 255, 255, 0.87);
+  
+
+ 
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  position: fixed;
+  right: 0;
+  left: 0;
+  background-color: #242424;
+  top: 0;
+}
+.header .headerLeft{
+  width: 180px;
+}
+.goHomePageButton{
+  background-color: inherit;
+  color: white;
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+}
+.inputForm{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.inputForm input{
+  width: 90%;
+  height: 50px;
+  outline: none;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #fff4f4;
+}
+.righHeader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.righHeader img{
+  width: 50px;
+  padding-right: 60px;
+  margin-bottom: 10px;
+}
+.righHeader span{
+  padding-right: 55px;
+  font-size: 15px;
+  font-weight: bolder;
+  margin-bottom: -10px;
+}
+/* Products*/
+
+/* .productList{
+  display: grid;
+ 
+  list-style: none;
+  padding: 0;
+}
+.productList li{
+  display: inline-block;
+  margin-right: 10px;
+  
+}
+.productList img{
+  width: 150px;
+} */
+.productsContainer {
+  
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  display: flex;
+}
+
+.productList {
+  margin-top: 100px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+  width: 1200px;
+}
+
+.productItem {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.7px solid #0c0c0c;
+  
+  text-align: center;
+  transition: scale 0.15s;
+}
+.productItem:hover{
+  border: 1.7px solid #f79400;
+  scale: 1.05;
+}
+@media screen and (max-width: 767px) {
+  .productList {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+  }
+}
+.productList img{
+  width: 150px;
+}
+.addButton{
+  padding: 7px;
+  color: black;
+  border: 1px;
+  border-radius: 10px;
+  width: 70%;
+  font-size: 20px;
+  margin-bottom: 10px;
+  background-color: #e78953;
+ 
+} 
+.addButton:hover ,.goToPay:hover{
+  box-shadow: 5px 1px 10px rgba(0, 0, 0,0.5);
+}
+/* cartSummery */
+.cartSummery{
+  border: 1 solid black;
+  margin-top: 100px;
+  margin-left: 10px;
+  width:350px;
+}
+.productItemCart{
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #0c0c0c;
+ 
+  text-align: center;
+  width: 350px;
+}
+.summerText{
+  font-size: 20px;
+  font-weight: bold;
+
+  margin-left: 20px;
+}
+.deleteButton{
+  background-color: rgb(220, 117, 20);
+  border: none;
+  padding: 8px 8px ;
+  
+  margin-left: 40px;
+  margin-bottom: 5px;
+  width: 120px;
+  color: rgb(0, 0, 0);
+  font-size: 19px;
+  font-weight: bold;
+  border-radius: 10px;
+ 
+}
+.deleteButton:hover{
+  box-shadow: 5px 1px 10px rgba(0,0,0,0.5);
+  scale: 1.05;
+}
+.costText{
+  font-size: 15px;
+  font-weight: bold;
+}
+.price{
+  color: rgb(45, 2, 80);
+}
+.payContainerCart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.goToPay{
+  width: 71%;
+  margin-left: 40px;
+  padding: 7px;
+  border-radius: 7px;
+  margin-top: 5px;
+  background-color: #ffaa0d;
+  font-size: 20px;
+  border: 1px solid rgb(0, 0, 0);
+}
+/* PayForm */
+.payContainer{
+  color: #242424;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+
+}
+
+.cardNumber,.exp_date,.cvv{
+  display: flex;
+  justify-content: space-between;
+  width:400px;
+  align-items: center;
+  font-size: 20px;
+ 
+}
+.iputPay{
+  width: 70%;
+  height: 40px;
+}
+.submit{
+  width: 100%;
+  height: 40px;
+  background-color: #e78953;
+  border: none;
+  border-radius: 1.5rem;
+}
+.submit:hover{
+  box-shadow: 5px 1px 10px rgba(0,0,0,0.5);
+}
+.paymentInfo{
+ 
+  margin: 0;
+  margin-top: -300px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  
+  p {
+    
+    margin-left: -200px;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+}
+.paymentInfo :nth-child(1){
+  color: #000000;
+}

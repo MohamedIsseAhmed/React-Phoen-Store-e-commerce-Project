@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import productContext from './context/ProductContext'
 
-export default function HeaderRight({productsCount}) {
+export default function HeaderRight() {
   
+  const {productCount}=useContext(productContext);
   return (
     <div className='righHeader'>
-      {productsCount>0 &&  <span>{productsCount}</span>}
+      {productCount>0 &&  <span>{productCount}</span>}
      
       <img src='images/cart-icon.png'/>
     </div>

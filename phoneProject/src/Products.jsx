@@ -1,12 +1,15 @@
 import React from 'react'
 import Cart from './cart';
 import centsToUSD from './convertToUSD';
-export default function Products({ data,cart,productAdded,productCount,productsCost,handleAddCart,deleteCart }) {
+import { useContext } from 'react';
+import productContext from './context/ProductContext';
 
-  
+export default function Products() {
+
+  const {data,cart,productAdded,productCount,productsCost,handleAddCart,deleteCart} =useContext(productContext);
   return (
     <>
-
+    {console.log()}
     <main className='productsContainer'>
       <ul className='productList'>
         {data.map((d) => (

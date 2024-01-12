@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import productContext from './context/ProductContext';
 
-const PaForm = ({productsCost,productsCount}) => {
+const PaForm = () => {
+
+  const {productsCost,productCount}=useContext(productContext);
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCVV] = useState('');
@@ -33,7 +36,7 @@ const PaForm = ({productsCost,productsCount}) => {
     <div className="payContainer">
       <div className="paymentInfo">
         <p>Total Money: ${productsCost}</p>
-        <p>Total Products: {productsCount}</p>
+        <p>Total Products: {productCount}</p>
         
       </div>
       <form className='payForm' onSubmit={handleSubmit}>

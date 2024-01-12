@@ -10,7 +10,7 @@ export default function Cart({cartData, productCount,productsCost,deleteCart}) {
     <div className='cartSummery'>
       <span className='summerText'>Cart Summery</span>
       <button onClick={()=>deleteCart()} className='deleteButton'>Delete Cart</button>
-        {cartData.map((cart,i)=>{
+        {cartData.map((cart)=>{
           return(
             <>
               

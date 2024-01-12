@@ -61,22 +61,7 @@
   font-weight: bolder;
   margin-bottom: -10px;
 }
-/* Products*/
 
-/* .productList{
-  display: grid;
- 
-  list-style: none;
-  padding: 0;
-}
-.productList li{
-  display: inline-block;
-  margin-right: 10px;
-  
-}
-.productList img{
-  width: 150px;
-} */
 .productsContainer {
   
   width: 100%;
@@ -204,7 +189,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Set the height to 100% of the viewport height */
+  height: 100vh; 
 
 }
 

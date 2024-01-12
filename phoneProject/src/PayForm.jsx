@@ -9,23 +9,23 @@ const PaForm = () => {
   const [cvv, setCVV] = useState('');
 
   const handleCardNumberChange = (e) => {
-    // Implement validation if needed
+ 
     setCardNumber(e.target.value);
   };
 
   const handleExpiryDateChange = (e) => {
-    // Implement validation if needed
+   
     setExpiryDate(e.target.value);
   };
 
   const handleCVVChange = (e) => {
-    // Implement validation if needed
+ 
     setCVV(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic, e.g., sending data to the server
+ 
     console.log('Form submitted:', { cardNumber, expiryDate, cvv });
   };
 
